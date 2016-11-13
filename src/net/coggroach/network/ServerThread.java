@@ -64,13 +64,13 @@ public class ServerThread implements Runnable
 	
 	public void process(String s) throws IOException
 	{
-		System.out.println("[Received]: " + s);
+		System.out.println("[Received" + ":" + id + "]: " + s);
 		if(s.contains("KILL_SERVICE"))
 			isRunning = false;
 		if(s.contains("HELO text"))
 		{
-			String message = "HELO text\nIP:[" + ipAddress + "]\nPort:[" + Options.SOCKET_ID + "]\nStudentID:[" + Options.STUDENT_ID + "]\n";
-			System.out.println("[Sending]: " + message);
+			String message = "HELO text\nIP:[" + ipAddress + "]\nPort:[" + Options.DEFAULT_SOCKET_ID + "]\nStudentID:[" + Options.STUDENT_ID + "]\n";
+			System.out.println("[Sending" + ":" + id + "]: " + message);
 			stream.write(message);
 		}					
 	}
