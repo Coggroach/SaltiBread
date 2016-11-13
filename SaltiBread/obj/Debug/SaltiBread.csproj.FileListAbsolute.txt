@@ -1,1 +1,0 @@
-E:\Development\C#\Projects\SaltiBread\SaltiBread\bin\Debug\SaltiBread.exe.config
